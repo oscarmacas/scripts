@@ -19,7 +19,7 @@ doskey sp=winget search $*
 doskey al=more "C:\aliases\aliases.bat"
 doskey i=micro $*
 doskey edit=For /F %%n IN ('fzf') DO @(micro %%n)
-doskey wf=netsh wlan show profile key=clear $*
+doskey wf=netsh wlan show profile key=clear $* $B findstr /i /L /c:"Nombre de SSID" /c:"clave"
 doskey enviar=croc send --code oscarm $*
 doskey recibir=croc --yes oscarm
 doskey inv=cd "%userprofile%\Documents\inventarios\"
