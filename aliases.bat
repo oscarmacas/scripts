@@ -22,3 +22,5 @@ doskey edit=For /F %%n IN ('fzf') DO @(micro %%n)
 doskey wf=netsh wlan show profile key=clear $*
 doskey enviar=croc send --code oscarm $*
 doskey recibir=croc --yes oscarm
+doskey inv=cd "%userprofile%\Documents\inventarios\"
+
