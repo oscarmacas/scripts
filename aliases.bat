@@ -23,4 +23,4 @@ doskey wf=netsh wlan show profile key=clear $* $B findstr /i /L /c:"Nombre de SS
 doskey enviar=croc send --code oscarm $*
 doskey recibir=croc --yes oscarm
 doskey inv=cd "%userprofile%\Documents\inventarios\"
-
+doskey k=taskkill /IM cmd.exe
