@@ -24,3 +24,4 @@ doskey enviar=croc send --code oscarm $*
 doskey recibir=croc --yes oscarm
 doskey inv=cd "%userprofile%\Documents\inventarios\"
 doskey k=taskkill /IM cmd.exe
+doskey io=copy %userprofile%\Documents\inventarios\plantilla_inventarios.xlsx %userprofile%\Documents\inventarios\"inventario_$*_2023.xlsx" $T %userprofile%\Documents\inventarios\"inventario_$*_2023.xlsx"
