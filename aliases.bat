@@ -28,3 +28,5 @@ doskey io=copy %userprofile%\Documents\inventarios\plantilla_inventarios.xlsx %u
 doskey yd=yt-dlp -f m4a "$*"
 doskey cc=7z a -tzip $1.zip $2 $3 $4 $5 $6
 doskey xx=7z x $*.zip -o$*
+doskey r=curl -L rentry.co/$*/raw
+doskey mr=curl -L rentry.co/$*/raw $B micro
