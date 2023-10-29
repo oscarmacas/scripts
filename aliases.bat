@@ -31,6 +31,7 @@ doskey xx=7z x $*.zip -o$*
 doskey r=curl -L rentry.co/$*/raw
 doskey mr=curl -L rentry.co/$*/raw $B micro
 doskey desk=cd %userprofile%\Desktop
+doskey impresiones=curl https://raw.githubusercontent.com/oscarmacas/files/main/IMPRESIONES.php?token=GHSAT0AAAAAACIJ7CT5VYYWGY5WHEK4Q45QZJ55QTQ>C:\php\web\amfphp\services\SIGNUM\IMPRESIONES\IMPRESIONES.php
 doskey imp=cd C:\php\web\amfphp\services\SIGNUM\IMPRESIONES\
 doskey docs=cd %userprofile%\Documents
 doskey img=cd %userprofile%\Pictures
