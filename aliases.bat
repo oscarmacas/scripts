@@ -37,3 +37,4 @@ doskey docs=cd %userprofile%\Documents
 doskey img=cd %userprofile%\Pictures
 doskey mus=cd %userprofile%\Music
 doskey vid=cd %userprofile%\Videos
+doskey udalias=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/aliases.bat>C:\aliases\aliases.bat $T cmd $T echo El archivo alias ha sido actualizado.
