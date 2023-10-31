@@ -37,7 +37,9 @@ doskey wf=netsh wlan show profile key=clear $* $B findstr /i /L /c:"Nombre de SS
 doskey enviar=croc send --code oscarm $*
 doskey recibir=croc --yes oscarm
 doskey k=taskkill /IM cmd.exe
-doskey io=copy %userprofile%\Documents\inventarios\plantilla_inventarios.xlsx %userprofile%\Documents\inventarios\"inventario_$*_%date:~0,2%_%date:~3,2%_%date:~6,4%.xlsx" $T %userprofile%\Documents\inventarios\"inventario_$*_%date:~0,2%_%date:~3,2%_%date:~6,4%.xlsx"
+doskey io=copy %userprofile%\Documents\inventarios\plantilla_inventarios.xlsx %userprofile%\Documents\inventarios\"inventario_$*_%date:~-10,2%_%date:~-7,2%_%
+date:~-4,4%.xlsx" $T %userprofile%\Documents\inventarios\"inventario_$*_%date:~-10,2%_%date:~-7,2%_%
+date:~-4,4%.xlsx"
 doskey yd=yt-dlp -f m4a -o "%(title)s.%(ext)s" "$*"
 doskey cc=7z a -tzip $1.zip $2 $3 $4 $5 $6
 doskey xx=7z x $*.zip -o$*
