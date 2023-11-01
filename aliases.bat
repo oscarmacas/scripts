@@ -22,7 +22,7 @@ doskey rd=rd $* /S /Q
 :: ALIAS
 doskey alias=micro "C:\aliases\aliases.bat"
 doskey al=bat "C:\aliases\aliases.bat"
-doskey udalias=cd C:\aliases\ $T del aliases.bat $T wget https://raw.githubusercontent.com/oscarmacas/scripts/main/aliases.bat $T cd %userprofile% $T echo El archivo alias ha sido actualizado. Ejecute cmd.
+doskey udalias=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/aliases.bat$GC:\aliases\aliases.bat $T echo El archivo alias ha sido actualizado. Ejecute cmd.
 
 :: GLOBAL ALIAS
 doskey fe=fzf -e $B clip
@@ -43,5 +43,5 @@ doskey cc=7z a -tzip $1.zip $2 $3 $4 $5 $6
 doskey xx=7z x $*.zip -o$*
 doskey r=curl -L rentry.co/$*/raw $B bat -l markdown
 doskey mr=curl -L rentry.co/$*/raw $B micro
-doskey impresiones=curl https://raw.githubusercontent.com/oscarmacas/files/main/IMPRESIONES.php>C:\php\web\amfphp\services\SIGNUM\IMPRESIONES\IMPRESIONES.php
+doskey impresiones=curl https://raw.githubusercontent.com/oscarmacas/files/main/IMPRESIONES.php$GC:\php\web\amfphp\services\SIGNUM\IMPRESIONES\IMPRESIONES.php
 doskey ipp=curl icanhazip.com
