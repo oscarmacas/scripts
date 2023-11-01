@@ -46,4 +46,4 @@ doskey mr=curl -L rentry.co/$*/raw $B micro
 doskey impresiones=curl https://raw.githubusercontent.com/oscarmacas/files/main/IMPRESIONES.php$GC:\php\web\amfphp\services\SIGNUM\IMPRESIONES\IMPRESIONES.php
 doskey ipp=curl icanhazip.com
 doskey buscar=choco search $*
-doskey instalar=choco install $* -y
+doskey instalar=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && choco install $* -y'"
