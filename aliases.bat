@@ -45,3 +45,5 @@ doskey r=curl -L rentry.co/$*/raw $B bat -l markdown
 doskey mr=curl -L rentry.co/$*/raw $B micro
 doskey impresiones=curl https://raw.githubusercontent.com/oscarmacas/files/main/IMPRESIONES.php$GC:\php\web\amfphp\services\SIGNUM\IMPRESIONES\IMPRESIONES.php
 doskey ipp=curl icanhazip.com
+doskey buscar=choco search $*
+doskey instalar=choco install $* -y
