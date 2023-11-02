@@ -36,7 +36,7 @@ doskey edit=For /F %%n IN ('fzf') DO @(micro %%n)
 doskey wf=netsh wlan show profile key=clear $* $B findstr /i /L /c:"Nombre de SSID" /c:"clave"
 doskey enviar=croc send --code oscarm $*
 doskey recibir=croc --yes oscarm
-doskey k=taskkill /IM cmd.exe
+doskey kk=taskkill /IM cmd.exe
 doskey io=copy %userprofile%\Documents\inventarios\plantilla_inventarios.xlsx %userprofile%\Documents\inventarios\"inventario_$*_%date:~-10,2%_%date:~-7,2%_%date:~-4,4%.xlsx" $T %userprofile%\Documents\inventarios\"inventario_$*_%date:~-10,2%_%date:~-7,2%_%date:~-4,4%.xlsx"
 doskey yd=yt-dlp -f m4a -o "%(title)s.%(ext)s" "$*"
 doskey cc=7z a -tzip $1.zip $2 $3 $4 $5 $6
@@ -49,3 +49,4 @@ doskey ccs=choco search $*
 doskey cin=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && choco install $* -y'"
 doskey win=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && winget install $*'"
 doskey wws=winget search
+doskey k=taskkill /IM WindowsTerminal.exe
