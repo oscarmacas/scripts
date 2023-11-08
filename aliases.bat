@@ -62,3 +62,4 @@ doskey 7zl=7z l $*
 doskey 7za=7z a -tzip $1 $2 $3 $4 $5 $6
 doskey dl=aria2c --max-concurrent-downloads=16 --split=16 --max-connection-per-server=16 --min-split-size=1M --max-download-limit=0 $*
 doskey dll=aria2c --max-concurrent-downloads=16 --split=16 --max-connection-per-server=16 --min-split-size=1M --max-download-limit=0 -i $*
+doskey pth=setx /M path "%path%;$*"
