@@ -15,9 +15,10 @@ doskey stup=cd "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Progr
 doskey apdt=cd %appdata%
 doskey .=start .
 doskey q=exit
-doskey ls=dir /B
+::doskey ls=dir /B
 doskey ll=dir /B /od
 doskey rd=rd $* /S /Q
+doskey ls=ls --color=auto -H -F
 
 :: ALIAS
 doskey alias=micro "C:\aliases\aliases.bat"
