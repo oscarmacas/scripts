@@ -36,7 +36,7 @@ doskey i=micro $*
 doskey edit=For /F %%n IN ('fzf') DO @(micro %%n)
 doskey wf=netsh wlan show profile key=clear $* $B findstr /i /L /c:"Nombre de SSID" /c:"clave"
 doskey enviar=croc send --code oscarm $*
-doskey recibir=croc --yes oscarm
+doskey recibir=md %userprofile%\Desktop\recibidos\ & cd %userprofile%\Desktop\recibidos\ & croc --yes oscarm & start .
 doskey kk=taskkill /IM cmd.exe
 doskey io=copy %userprofile%\Documents\inventarios\plantilla_inventarios.xlsx %userprofile%\Documents\inventarios\"inventario_$*_%date:~-10,2%_%date:~-7,2%_%date:~-4,4%.xlsx" $T %userprofile%\Documents\inventarios\"inventario_$*_%date:~-10,2%_%date:~-7,2%_%date:~-4,4%.xlsx"
 doskey yd=yt-dlp -f m4a -o "%(title)s.%(ext)s" "$*"
