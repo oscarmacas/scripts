@@ -62,7 +62,10 @@ doskey ..= cd ..
 doskey ...= cd ..\..
 doskey 7zl=7z l $*
 doskey 7za=7z a -tzip $1 $2 $3 $4 $5 $6
+doskey noprint=
 doskey dl=aria2c --max-concurrent-downloads=16 --split=16 --max-connection-per-server=16 --min-split-size=1M --max-download-limit=0 $*
 doskey dll=aria2c --max-concurrent-downloads=16 --split=16 --max-connection-per-server=16 --min-split-size=1M --max-download-limit=0 -i $*
 doskey pth=setx /M path "%path%;$*"
 doskey office10=aria2c --max-concurrent-downloads=16 --split=16 --max-connection-per-server=16 --min-split-size=1M --max-download-limit=0 -j 1 -i magnet:?xt=urn:btih:27113327FBC680659464B72F63A2C1C644AC8EF8^&dn=Microsoft%20OFFICE%202010%20%20Pro%20Plus%20PRECRACKED^&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337^&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A6969%2Fannounce^&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce^&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce^&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce^&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce^&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce^&tr=udp%3A%2F%2Fexodus.desync.com%3A6969^&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce
+doskey nprint= ren C:\php\web\amfphp\services\SIGNUM\IMPRESIONES\IMPRESIONES.php C:\php\web\amfphp\services\SIGNUM\IMPRESIONES\IMPRESIONES.php.dot
+doskey yprint=C:\php\web\amfphp\services\SIGNUM\IMPRESIONES\IMPRESIONES.php.dot C:\php\web\amfphp\services\SIGNUM\IMPRESIONES\IMPRESIONES.php
