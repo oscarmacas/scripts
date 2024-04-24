@@ -23,7 +23,7 @@ doskey ls=ls --color=auto -H -F
 :: ALIAS
 doskey alias=micro "C:\aliases\aliases.bat"
 doskey al=bat "C:\aliases\aliases.bat"
-doskey udalias=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/aliases.bat$GC:\aliases\aliases.bat $T cmd $T echo El archivo alias ha sido actualizado.
+doskey udalias=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/aliases.bat$GC:\aliases\aliases.bat $T echo [101;93m El archivo alias ha sido actualizado. [0m $T cmd
 
 :: GLOBAL ALIAS
 doskey fe=fzf -e $B clip
