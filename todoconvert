@@ -1,0 +1,169 @@
+@echo off
+setlocal enabledelayedexpansion
+
+:main_menu
+cls
+echo Convierte formatos de archivos
+echo.
+echo 1. Video
+echo 2. Audio
+echo 3. Imagen
+echo 4. Documento
+echo 5. Salir
+echo.
+
+set /p choice="Selecciona una opcion (1-5): "
+
+if "%choice%"=="1" goto video_menu
+if "%choice%"=="2" goto audio_menu
+if "%choice%"=="3" goto image_menu
+if "%choice%"=="4" goto document_menu
+if "%choice%"=="5" exit
+
+echo Selección invalida, intenta de nuevo.
+pause
+goto main_menu
+
+:video_menu
+cls
+echo Opciones para convertir videos:
+echo.
+echo Formatos disponibles: MP4, AVI, MP3
+echo.
+
+set "output_format="
+:video_format_menu
+echo Selecciona un formato:
+echo 1. AVI
+echo 2. MP4
+echo 3. MP3
+echo 4. Salir
+echo.
+
+set /p video_format_choice="Selecciona una opcion (1-4): "
+if "%video_format_choice%"=="1" set "output_format=AVI"
+if "%video_format_choice%"=="2" set "output_format=MP4"
+if "%video_format_choice%"=="3" set "output_format=MP3"
+if "%video_format_choice%"=="4" exit
+if not defined output_format (
+    echo Seleccion invalida, intenta de nuevo.
+    goto video_format_menu
+)
+
+set /p input_files="Selecciona los videos (separados con espacios si son varios): "
+
+for %%i in (%input_files%) do (
+    set "input_path=%%~ni"
+    set "output_path=%%~dpni_output.%output_format%"
+    ffmpeg -i "%%i" "!output_path!"
+)
+
+pause
+goto main_menu
+
+:audio_menu
+cls
+echo Opciones para convertir audios:
+echo.
+echo Formatos disponibles: MP3, WAV
+echo.
+
+set "output_format="
+:audio_format_menu
+echo Selecciona un formato:
+echo 1. WAV
+echo 2. MP3
+echo 3. m4a
+echo 4. Salir
+echo.
+
+set /p audio_format_choice="Selecciona una opcion (1-4): "
+if "%audio_format_choice%"=="1" set "output_format=WAV"
+if "%audio_format_choice%"=="2" set "output_format=MP3"
+if "%audio_format_choice%"=="3" set "output_format=m4a"
+if "%audio_format_choice%"=="4" exit
+if not defined output_format (
+    echo Seleccion invalida, intenta de nuevo.
+    goto audio_format_menu
+)
+
+set /p input_files="Selecciona los audios (separados con espacios si son varios): "
+
+for %%i in (%input_files%) do (
+    set "input_path=%%~ni"
+    set "output_path=%%~dpni_output.%output_format%"
+    ffmpeg -i "%%i" "!output_path!"
+)
+
+pause
+goto main_menu
+
+:image_menu
+cls
+echo Opciones para convertir imagenes:
+echo.
+echo Formatos disponibles: JPG, PNG
+echo.
+
+set "output_format="
+:image_format_menu
+echo Selecciona un formato:
+echo 1. PNG
+echo 2. JPG
+echo 3. Salir
+echo.
+
+set /p image_format_choice="Selecciona una opcion (1-2): "
+if "%image_format_choice%"=="1" set "output_format=PNG"
+if "%image_format_choice%"=="2" set "output_format=JPG"
+if "%image_format_choice%"=="3" exit
+if not defined output_format (
+    echo Seleccion invalida, intenta de nuevo.
+    goto image_format_menu
+)
+
+set /p input_files="Selecciona las imagenes (separadas con espacios si son varias): "
+
+for %%i in (%input_files%) do (
+    set "input_path=%%~ni"
+    set "output_path=%%~dpni_output.%output_format%"
+    magick convert "%%i" "!output_path!"
+)
+
+pause
+goto main_menu
+
+:document_menu
+cls
+echo Opciones para convertir documentos:
+echo.
+echo Formatos disponibles: DOCX, PDF
+echo.
+
+set "output_format="
+:document_format_menu
+echo Selecciona un formato:
+echo 1. DOCX
+echo 2. PDF
+echo 3. Salir
+echo.
+
+set /p document_format_choice="Selecciona una opcion (1-3): "
+if "%document_format_choice%"=="1" set "output_format=DOCX"
+if "%document_format_choice%"=="2" set "output_format=PDF"
+if "%document_format_choice%"=="3" exit
+if not defined output_format (
+    echo Seleccion invalida, intenta de nuevo.
+    goto document_format_menu
+)
+
+set /p input_files="Selecciona los documentos (separados con espacios si son varios): "
+
+for %%i in (%input_files%) do (
+    set "input_path=%%~ni"
+    set "output_path=%%~dpni_output.%output_format%"
+    soffice --headless --convert-to %output_format% "%%i" --outdir "!output_path!"
+)
+
+pause
+goto main_menu
