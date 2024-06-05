@@ -72,3 +72,4 @@ doskey nprint=cd "C:\php\web\amfphp\services\SIGNUM\IMPRESIONES\" $T ren IMPRESI
 doskey yprint=cd "C:\php\web\amfphp\services\SIGNUM\IMPRESIONES\" $T ren IMPRESIONES.php.dot IMPRESIONES.php
 doskey stxt=croc send --code oscarm --text $*
 doskey rtxt=croc --yes oscarm
+doskey conv="C:\script\todoconvert.bat"
