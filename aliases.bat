@@ -75,4 +75,4 @@ doskey yprint=cd "C:\php\web\amfphp\services\SIGNUM\IMPRESIONES\" $T ren IMPRESI
 doskey stxt=croc send --code oscarm --text $*
 doskey rtxt=croc --yes oscarm
 doskey conv="C:\script\todoconvert.bat"
-doskey aliasinfo=cd C:\aliases $T powershell -command "Get-Item "aliases.bat" $B Select-Object Name, Creation time, LastWriteTime"
+doskey aliasinfo=cd C:\aliases $T powershell -command "Get-Item "aliases.bat" $B Select-Object Name, CreationTime, LastWriteTime"
