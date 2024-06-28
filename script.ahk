@@ -30,7 +30,11 @@ Return
     RunWait, "C:\script\dwscript.bat"
 Return
 
-F1:: ; Asignamos la secuencia de teclas a la tecla F1. Puedes cambiar esto a cualquier otra tecla que prefieras.
+F2::
+Run, calc.exe
+Return
+
+^+!0:: ; Asignamos la secuencia de teclas a la tecla F1. Puedes cambiar esto a cualquier otra tecla que prefieras.
 Send, +{Space} ; Shift + Espacio
 Sleep, 100 ; Pequeña pausa para asegurar que las teclas se registren
 Send, +{Down} ; Flecha abajo
