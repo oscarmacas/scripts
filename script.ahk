@@ -197,3 +197,8 @@ F2::Run("calc.exe")
     Sleep(100)
     Send("+{Right}")
 }
+
+^#a:: ; ejecuta el script ahk para facilitar hacer pedidos
+{
+    Run "C:\script\crosshair.ahk"
+}
