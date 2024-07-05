@@ -76,3 +76,4 @@ doskey stxt=croc send --code oscarm --text $*
 doskey rtxt=croc --yes oscarm
 doskey conv="C:\script\todoconvert.bat"
 doskey udahk=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/script.ahk$G"%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk"
+doskey iudahk=taskkill /IM autohotkey.exe && choco uninstall autohotkey -y && winget install autohotkey.autohotkey && del userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk" && curl https://raw.githubusercontent.com/oscarmacas/scripts/main/script.ahk$G"%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk"
