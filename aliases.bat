@@ -42,7 +42,7 @@ doskey kk=taskkill /IM cmd.exe
 doskey io=copy %userprofile%\Documents\inventarios\plantilla_inventarios.xlsx %userprofile%\Documents\inventarios\"inventario_$*_%date:~-10,2%_%date:~-7,2%_%date:~-4,4%.xlsx" $T %userprofile%\Documents\inventarios\"inventario_$*_%date:~-10,2%_%date:~-7,2%_%date:~-4,4%.xlsx"
 doskey yd=yt-dlp -f m4a -o "%(title)s.%(ext)s" "$*"
 doskey cc=7z a -tzip $1.zip $2 $3 $4 $5 $6
-doskey xx=7z x $*.zip -o$*
+doskey xx=if not exist "$1" (echo File not found: $1) else if "$2"=="" (for %%I in ("$1") do 7z x "%%I" -o"%%~dpnI") else if exist "$2\" (7z x "$1" -o"$2") else (echo Invalid output directory: $2) $t cd $1 $t dir /b
 doskey r=curl -L rentry.co/$*/raw $B bat -l markdown
 doskey oslink=curl -L rentry.co/oslink/raw
 doskey osinstall=curl -L rentry.co/osinstall/raw
@@ -75,3 +75,5 @@ doskey stxt=croc send --code oscarm --text $*
 doskey rtxt=croc --yes oscarm
 doskey conv="C:\script\todoconvert.bat"
 doskey udahk=taskkill /im "autohotkey.exe" $T taskkill /im "autohotkey64.exe" $T winget upgrade autohotkey.autohotkey $T del "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk" $T curl https://raw.githubusercontent.com/oscarmacas/scripts/main/script.ahk$G"%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk" $T "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk"
+doskey inputy=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/inv_input.ahk$G"C:\script\inv_input.ahk" $T "C:\script\inv_input.ahk"
+doskey inputn=taskkill /im "autohotkey.exe" $T taskkill /im "autohotkey64.exe" $T "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk
