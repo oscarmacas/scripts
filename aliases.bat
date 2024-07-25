@@ -75,5 +75,6 @@ doskey stxt=croc send --code oscarm --text $*
 doskey rtxt=croc --yes oscarm
 doskey conv="C:\script\todoconvert.bat"
 doskey udahk=taskkill /im "autohotkey.exe" $T taskkill /im "autohotkey64.exe" $T winget upgrade autohotkey.autohotkey $T del "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk" $T curl https://raw.githubusercontent.com/oscarmacas/scripts/main/script.ahk$G"%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk" $T "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk"
+doskey udahk2=taskkill /im "autohotkey.exe" $T taskkill /im "autohotkey64.exe" $T del "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk" $T curl https://raw.githubusercontent.com/oscarmacas/scripts/main/script.ahk$G"%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk" $T "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk"
 doskey inputy=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/inv_input.ahk$G"C:\script\inv_input.ahk" $T "C:\script\inv_input.ahk"
 doskey inputn=taskkill /im "autohotkey.exe" $T taskkill /im "autohotkey64.exe" $T "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk
