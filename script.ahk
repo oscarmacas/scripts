@@ -17,7 +17,29 @@
     RunWait("C:\script\dwscript.bat")
 }
 
-F2::Run("calc.exe")
+; F1: Abrir el sistema
+F1::
+{
+    Run A_UserProfile "\AppData\Roaming\Palemoon\Palemoon\Palemoon-Portable.exe"
+}
+
+; F2: Abrir la Calculadora
+F2::
+{
+    Run "calc.exe"
+}
+
+; F3: Abrir la Consola (Command Prompt)
+F3::
+{
+    Run "cmd.exe"
+}
+
+; F4: Abrir la Consola como Administrador
+F4::
+{
+    Run "*RunAs cmd.exe"
+}
 
 ^+!0::
 {
