@@ -17,12 +17,6 @@
     RunWait("C:\script\dwscript.bat")
 }
 
-; F1: Abrir el sistema
-F1::
-{
-    Run A_UserProfile "\AppData\Roaming\Palemoon\Palemoon\Palemoon-Portable.exe"
-}
-
 ; F2: Abrir la Calculadora
 F2::
 {
