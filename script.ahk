@@ -35,6 +35,17 @@ F4::
     Run "*RunAs cmd.exe"
 }
 
+F5:: {
+    ProcessName := "Palemoon.exe"
+    Path := A_AppData "\Palemoon\Palemoon\Palemoon-Portable.exe"
+
+    if WinExist("ahk_exe " ProcessName) {
+        WinActivate
+    } else {
+        Run(Path)
+    }
+}
+
 ^+!0::
 {
     Send("+{Space}")
