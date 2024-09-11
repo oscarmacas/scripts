@@ -81,3 +81,4 @@ doskey inputn=taskkill /im "autohotkey.exe" $T taskkill /im "autohotkey64.exe" $
 doskey xtbat=mkdir "C:\script\lib\" $t cd "C:\script\lib\" $t curl https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/extract_zip.bat --output extract_zip.bat
 doskey xt="C:\script\lib\extract_zip.bat" $*
 doskey udnvim=cmd /c "if not exist "%USERPROFILE%\AppData\Local\nvim" mkdir "%USERPROFILE%\AppData\Local\nvim" $t curl -o "%USERPROFILE%\AppData\Local\nvim\init.vim" https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/init.vim"
+doskey nv=nvim $*
