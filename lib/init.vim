@@ -38,4 +38,4 @@ set undofile
 
 " Set theme (choose one you like)
 set background=dark
-colorscheme ron
+colorscheme vim
