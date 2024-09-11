@@ -23,7 +23,7 @@ doskey ls=ls --color=auto -H -F
 :: ALIAS
 doskey alias=cmd /c where nvim $Gnul 2$Gnul $T$T (nvim C:\aliases\aliases.bat) $B$B (more C:\aliases\aliases.bat)
 doskey al=bat "C:\aliases\aliases.bat"
-doskey udalias=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/aliases.bat$GC:\aliases\aliases.bat $T echo =============    El archivo alias ha sido actualizado. Ejecute cmd.  ==================
+doskey udalias=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/aliases.bat$GC:\aliases\aliases.bat $T echo =============    El archivo alias ha sido actualizado. Ejecute cmd.  ===================
 
 :: GLOBAL ALIAS
 doskey fe=fzf -e $B clip
