@@ -39,3 +39,5 @@ set undofile
 " Set theme (choose one you like)
 set background=dark
 colorscheme vim
+
+set listchars=space:·,tab:>-,eol:↴
