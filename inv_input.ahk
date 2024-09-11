@@ -15,7 +15,7 @@ Down::
 Enter::
 {
 	Send("{Enter}")
-	Sleep(200)
+	Sleep(250)
 	Send("{Escape}")
 	Sleep(250)
 	Send("{Right 2}")
