@@ -21,7 +21,7 @@ doskey rd=rd $* /S /Q
 doskey ls=ls --color=auto -H -F
 
 :: ALIAS
-doskey alias=micro "C:\aliases\aliases.bat"
+doskey alias=nvim "C:\aliases\aliases.bat"
 doskey al=bat "C:\aliases\aliases.bat"
 doskey udalias=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/aliases.bat$GC:\aliases\aliases.bat $T echo El archivo alias ha sido actualizado. $T cmd
 doskey alinfo=dir "C:\aliases\aliases.bat"
