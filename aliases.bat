@@ -82,6 +82,8 @@ doskey udahk=taskkill /im "autohotkey.exe" $T taskkill /im "autohotkey64.exe" $T
 doskey udss=taskkill /im "autohotkey.exe" $T taskkill /im "autohotkey64.exe" $T del "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk" $T curl https://raw.githubusercontent.com/oscarmacas/scripts/main/script.ahk$G"%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk" $T "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk"
 doskey inputy=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/inv_input.ahk$G"C:\script\inv_input.ahk" $T "C:\script\inv_input.ahk"
 doskey inputn=taskkill /im "autohotkey.exe" $T taskkill /im "autohotkey64.exe" $T "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk
+doskey xxc=curl -L rentry.co/$*/raw $B fzf -e $B clip
+
 doskey xtbat=mkdir "C:\script\lib\" $t cd "C:\script\lib\" $t curl https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/extract_zip.bat --output extract_zip.bat
 doskey xt="C:\script\lib\extract_zip.bat" $*
 doskey udnvim=cmd /c "if not exist "%USERPROFILE%\AppData\Local\nvim" mkdir "%USERPROFILE%\AppData\Local\nvim" $t curl -o "%USERPROFILE%\AppData\Local\nvim\init.vim" https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/init.vim"
