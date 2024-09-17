@@ -1,5 +1,9 @@
 #Requires AutoHotkey v2.0
 
+SetNumLockState("AlwaysOn") ; mantiene siempre activo el panel lateral de numeros
+
+toggle := true
+
 !z::
 {
     SendInput("9999999999{Tab}mumusoecuador@hotmail.com")
@@ -46,11 +50,21 @@ F5:: {
     }
 }
 
+^NumpadDiv::
+{
+    Send("\")
+}
+
 +Esc::
 {
     Run("https://docs.google.com/forms/d/e/1FAIpQLScuMG9j6T8nfDB_VruQ7-NNdyLJrAPKTCtgkf8lpli8Lh4gEw/viewform?usp=sf_link")
 }
 
+:*:nn:: ; inserta la fecha en el formato "01_01_2024"
+{
+    fecha_hora := FormatTime(A_Now, "dd_MM_yyyy")
+    Send(fecha_hora)
+}
 
 ^+!0::
 {
