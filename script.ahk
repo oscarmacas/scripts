@@ -46,6 +46,12 @@ F5:: {
     }
 }
 
++Esc::
+{
+    Run("https://docs.google.com/forms/d/e/1FAIpQLScuMG9j6T8nfDB_VruQ7-NNdyLJrAPKTCtgkf8lpli8Lh4gEw/viewform?usp=sf_link")
+}
+
+
 ^+!0::
 {
     Send("+{Space}")
