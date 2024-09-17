@@ -89,3 +89,5 @@ doskey xt="C:\script\lib\extract_zip.bat" $*
 doskey az="C:\script\lib\compress_zip.bat" $*
 doskey udnvim=cmd /c "if not exist "%USERPROFILE%\AppData\Local\nvim" mkdir "%USERPROFILE%\AppData\Local\nvim" $t curl -o "%USERPROFILE%\AppData\Local\nvim\init.vim" https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/init.vim"
 doskey nv=nvim $*
+doskey lnk=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T curl -o C:\script\lib\links.zip https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/links.zip $T cd C:\script\lib\ $T 7z x links.zip -olinks $T del links.zip" $T echo ======== EJECUTA EL COMANDO QUE CREA EL ACCESO DIRECTO DE run_batch.vbs ============
+doskey oper=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% $T$T curl -o Opera_GX_113.0.5230.75_Setup_x64.exe -L https://get.geo.opera.com/pub/opera_gx/113.0.5230.75/win/Opera_GX_113.0.5230.75_Setup_x64.exe $T$T Opera_GX_113.0.5230.75_Setup_x64.exe --silent --install'"
