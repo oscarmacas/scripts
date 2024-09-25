@@ -91,3 +91,6 @@ doskey udnvim=cmd /c "if not exist "%USERPROFILE%\AppData\Local\nvim" mkdir "%US
 doskey nv=nvim $*
 doskey lnk=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T curl -o C:\script\lib\links.zip https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/links.zip $T cd C:\script\lib\ $T 7z x links.zip -olinks $T del links.zip" $T echo ======== EJECUTA EL COMANDO QUE CREA EL ACCESO DIRECTO DE run_batch.vbs ============
 doskey oper=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% $T$T curl -o Opera_GX_113.0.5230.75_Setup_x64.exe -L https://get.geo.opera.com/pub/opera_gx/113.0.5230.75/win/Opera_GX_113.0.5230.75_Setup_x64.exe $T$T Opera_GX_113.0.5230.75_Setup_x64.exe --silent --install'"
+doskey fnm=rg -i "$*" %AppData%\ovscript\nm
+doskey gnm=cmd /c "if not exist %AppData%\ovscript\nm mkdir %AppData%\ovscript\nm $T cd %AppData%\ovscript\nm $T croc --yes oscarm"
+doskey irg=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && winget install BurntSushi.ripgrep.MSVC'"
