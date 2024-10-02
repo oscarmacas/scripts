@@ -1,25 +1,21 @@
 #Requires AutoHotkey v2.0
-#HotIf WinActive("ahk_class XLMAIN")
-NumpadEnter::
+#HotIf WinActive("ahk_class MozillaWindowClass")
+Down::
 {
+	Sleep(250)
 	Send("{Down}")
-	Sleep(250)
-	Send("{Up}")
-	Sleep(250)
-	Send("^f")
 	Sleep(350)
-	Send("{Backspace}")
-	Sleep(140)
+	Send("{Up}")
+	Sleep(350)
+	Send("^b")
+	Sleep(350)
 }
-#HotIf
-
-#HotIf WinActive("ahk_class bosa_sdm_XL9")
 Enter::
 {
 	Send("{Enter}")
-	Sleep(550)
+	Sleep(950)
 	Send("{Escape}")
-	Sleep(250)
+	Sleep(350)
 	Send("{Right 2}")
 	Sleep(150)
 }
