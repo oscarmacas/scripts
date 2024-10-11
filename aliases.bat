@@ -96,5 +96,5 @@ doskey oper=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k
 doskey fnm=rg -i "$*" %AppData%\ovscript\nm
 doskey gnm=cmd /c "if not exist %AppData%\ovscript\nm mkdir %AppData%\ovscript\nm $T cd %AppData%\ovscript\nm $T croc --yes oscarm"
 doskey irg=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && winget install BurntSushi.ripgrep.MSVC'"
-doskey cod=bat C:\script\lib\codes $B fzf -e
-doskey codin=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T curl -o C:\script\lib\codes.zip curl https://github.com/oscarmacas/files/raw/main/codes.zip $T cd C:\script\lib\ $T 7z x codes.zip -ocodes  
+doskey cod=bat C:\script\lib\codes\codes $B fzf -e
+doskey codin=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T wget https://github.com/oscarmacas/files/raw/main/codes.zip $T cd C:\script\lib\ $T 7z x codes.zip -ocodes"
