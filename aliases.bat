@@ -98,3 +98,5 @@ doskey gnm=cmd /c "if not exist %AppData%\ovscript\nm mkdir %AppData%\ovscript\n
 doskey irg=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && winget install BurntSushi.ripgrep.MSVC'"
 doskey cod=bat C:\script\lib\codes\codes $B fzf -e
 doskey codin=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T cd C:\script\lib\ $T wget https://github.com/oscarmacas/files/raw/main/codes.zip $T 7z x codes.zip -ocodes"
+doskey video= cd %userprofile%\Videos\youtube\video $T yt-dlp -f mp4 $* $T start .
+doskey audio= cd %userprofile%\Videos\youtube\audio $T yt-dlp -f m4a $* $T start .
