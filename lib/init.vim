@@ -38,6 +38,6 @@ set undofile
 
 " Set theme (choose one you like)
 set background=dark
-colorscheme habamax
+colorscheme desert
 
 set listchars=space:·,tab:>-,eol:↴
