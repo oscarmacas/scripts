@@ -68,7 +68,7 @@ F5:: {
 
 ^|:: ; Ctrl + |
 {
-    Run("python.exe", "C:\script\lib\abre_registradora.py")
+    Run("C:\script\lib\abre_registradora.py")
 }
 
 ^+!0::
