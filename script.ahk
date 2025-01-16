@@ -66,6 +66,11 @@ F5:: {
     Send(fecha_hora)
 }
 
+^|:: ; Ctrl + |
+{
+    Run("python.exe", "C:\script\lib\abre_registradora.py")
+}
+
 ^+!0::
 {
     Send("+{Space}")
