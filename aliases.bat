@@ -100,3 +100,4 @@ doskey cod=bat C:\script\lib\codes\codes $B fzf -e
 doskey codin=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T cd C:\script\lib\ $T wget -O codes.zip https://github.com/oscarmacas/files/raw/main/codes.zip $T 7z x codes.zip -ocodes -aoa"
 doskey video= cd %userprofile%\Videos\youtube\video $T yt-dlp -f mp4 $* $T start .
 doskey audio= cd %userprofile%\Videos\youtube\audio $T yt-dlp -f m4a $* $T start .
+doskey drawst=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T curl -o C:\script\lib\abre_registradora.py https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/abre_registradora.py
