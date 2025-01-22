@@ -101,7 +101,10 @@ doskey codin=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T cd C:\s
 doskey video= cd %userprofile%\Videos\youtube\video $T yt-dlp -f mp4 $* $T start .
 doskey audio= cd %userprofile%\Videos\youtube\audio $T yt-dlp -f m4a $* $T start .
 doskey drawst=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T curl -o C:\script\lib\abre_registradora.py https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/abre_registradora.py"
-doskey udvi=git clone https://github.com/oscarmacas/nvim.git %USERPROFILE%\AppData\Local\nvim
+
+:: NVIM RELATED ALIASES
+doskey nvico=git clone https://github.com/oscarmacas/nvim.git %USERPROFILE%\AppData\Local\nvim
+doskey udvi=git pull https://github.com/oscarmacas/nvim.git %USERPROFILE%\AppData\Local\nvim
 
 :: INSTALAR SCRIPTS DE PYTHON
 doskey pyst=git clone https://github.com/oscarmacas/python.git C:\script\python_scripts
