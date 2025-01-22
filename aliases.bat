@@ -101,12 +101,16 @@ doskey codin=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T cd C:\s
 doskey video= cd %userprofile%\Videos\youtube\video $T yt-dlp -f mp4 $* $T start .
 doskey audio= cd %userprofile%\Videos\youtube\audio $T yt-dlp -f m4a $* $T start .
 doskey drawst=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T curl -o C:\script\lib\abre_registradora.py https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/abre_registradora.py"
-doskey inpy1=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T curl -o C:\script\lib\reorder_excel.py https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/reorder_excel.py"
-doskey oio=C:\script\lib\reorder_excel.py
 doskey udvi=git clone https://github.com/oscarmacas/nvim.git %USERPROFILE%\AppData\Local\nvim
 
 :: INSTALAR SCRIPTS DE PYTHON
 doskey pyst=git clone https://github.com/oscarmacas/python.git C:\script\python_scripts
-:: EJECUTAR
+
+:: suma los codigos y busca los nombres y los agrega al final
 doskey sufipy=C:\script\python_scripts\sum_find_csv.py
+
+:: unifica todos los csv en uno solo
 doskey merpy=C:\script\python_scripts\merge.py
+
+:: organiza las filas y columnas en un excel
+doskey oio=C:\script\python_scripts\reorder_excel.py
