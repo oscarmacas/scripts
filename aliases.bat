@@ -103,4 +103,4 @@ doskey audio= cd %userprofile%\Videos\youtube\audio $T yt-dlp -f m4a $* $T start
 doskey drawst=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T curl -o C:\script\lib\abre_registradora.py https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/abre_registradora.py"
 doskey inpy1=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T curl -o C:\script\lib\reorder_excel.py https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/reorder_excel.py"
 doskey oio=C:\script\lib\reorder_excel.py
-doskey udvi=git clone https://github.com/oscarmacas/nvim.git %APPDATA%\Local\nvim
+doskey udvi=git clone https://github.com/oscarmacas/nvim.git %USERPROFILE%\AppData\Local\nvim
