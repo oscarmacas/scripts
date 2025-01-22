@@ -104,3 +104,9 @@ doskey drawst=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T curl -
 doskey inpy1=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T curl -o C:\script\lib\reorder_excel.py https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/reorder_excel.py"
 doskey oio=C:\script\lib\reorder_excel.py
 doskey udvi=git clone https://github.com/oscarmacas/nvim.git %USERPROFILE%\AppData\Local\nvim
+
+:: INSTALAR SCRIPTS DE PYTHON
+doskey pyst=git clone https://github.com/oscarmacas/python.git C:\script\python_scripts
+:: EJECUTAR
+doskey sufipy=C:\script\python_scripts\sum_find_csv.py
+doskey merpy=C:\script\python_scripts\merge.py
