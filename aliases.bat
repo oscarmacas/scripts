@@ -118,3 +118,5 @@ doskey merpy=C:\script\python_scripts\merge.py
 
 :: organiza las filas y columnas en un excel
 doskey oio=C:\script\python_scripts\reorder_excel.py
+
+doskey qrip=for /f "tokens=2 delims=:" %%a in ('ipconfig ^^^| findstr /i "IPv4"') do (for /f "tokens=* delims= " %%b in ("%%a") do curl qrenco.de/http://%%b:5000)
