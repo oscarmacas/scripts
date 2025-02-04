@@ -123,3 +123,5 @@ doskey qrip=for /f "tokens=2 delims=:" %%a in ('ipconfig ^^^| findstr /i "IPv4"'
 doskey inpy=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && winget install Python.Python.3.11'"
 
 doskey iodb=cd C:\script\server\ $T python -m menu.py
+
+doskey opendrawer=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/open_drawer.exe C:\script\open_drawer.exe
