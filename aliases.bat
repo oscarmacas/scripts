@@ -122,4 +122,4 @@ doskey oio=C:\script\python_scripts\reorder_excel.py
 doskey qrip=for /f "tokens=2 delims=:" %%a in ('ipconfig ^^^| findstr /i "IPv4"') do (for /f "tokens=* delims= " %%b in ("%%a") do curl qrenco.de/http://%%b:5000)
 doskey inpy=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && winget install Python.Python.3.11'"
 
-doskey iodb=C:\script\server\menu.py
+doskey iodb=cd C:\script\server\ $T python -m menu.py
