@@ -125,3 +125,6 @@ doskey inpy=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k
 doskey iodb=cd C:\script\server\ $T python -m menu
 
 doskey opendrawer=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/open_drawer.exe C:\script\open_drawer.exe
+
+:: EDIT DWSCRIPT.BAT
+doskey udrun=curl https://gitlab.com/scripts2073949/scripts/-/raw/main/dwscript$GC:\script\dwscript.bat
