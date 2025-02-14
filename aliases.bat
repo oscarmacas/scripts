@@ -130,3 +130,4 @@ doskey opendrawer=curl https://raw.githubusercontent.com/oscarmacas/scripts/main
 doskey udrun=curl https://gitlab.com/scripts2073949/scripts/-/raw/main/dwscript$GC:\script\dwscript.bat
 
 doskey cambio=cd C:\script\lib\ $T wget -O cambio.exe https://github.com/oscarmacas/files/raw/main/cambio.exe
+doskey html2tsv=cd "C:\script\lib\" $t curl https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/html2tsv.py --output html2tsv.py
