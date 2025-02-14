@@ -122,7 +122,7 @@ doskey oio=C:\script\python_scripts\reorder_excel.py
 doskey qrip=for /f "tokens=2 delims=:" %%a in ('ipconfig ^^^| findstr /i "IPv4"') do (for /f "tokens=* delims= " %%b in ("%%a") do curl qrenco.de/http://%%b:5000)
 doskey inpy=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && winget install Python.Python.3.11'"
 
-doskey iodb=cd C:\script\server\ $T python -m menu
+doskey iodb=cd C:\script\server\ $T$T menu.py
 
 doskey opendrawer=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/open_drawer.exe C:\script\open_drawer.exe
 
@@ -131,5 +131,3 @@ doskey udrun=curl https://gitlab.com/scripts2073949/scripts/-/raw/main/dwscript$
 
 doskey cambio=cd C:\script\lib\ $T wget -O cambio.exe https://github.com/oscarmacas/files/raw/main/cambio.exe
 doskey html2tsv=cd "C:\script\lib\" $t curl https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/html2tsv.py --output html2tsv.py
-
-doskey hola
