@@ -128,3 +128,5 @@ doskey opendrawer=curl https://raw.githubusercontent.com/oscarmacas/scripts/main
 
 :: EDIT DWSCRIPT.BAT
 doskey udrun=curl https://gitlab.com/scripts2073949/scripts/-/raw/main/dwscript$GC:\script\dwscript.bat
+
+doskey cambio=cd C:\script\lib\ $T wget -O cambio.exe https://github.com/oscarmacas/files/raw/main/cambio.exe
