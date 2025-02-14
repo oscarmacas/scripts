@@ -71,4 +71,11 @@ F5:: {
     Run("C:\script\open_drawer.exe")
 }
 
-
+!t:: ; Press Ctrl + Space to toggle always on top
+{
+    win := WinGetTitle("A") ; Get active window
+    if (WinGetExStyle(win) & 0x8) ; Check if always on top is enabled
+        WinSetAlwaysOnTop(0, win) ; Disable always on top
+    else
+        WinSetAlwaysOnTop(1, win) ; Enable always on top
+}
