@@ -1,6 +1,6 @@
 function prompt {
     $p = Split-Path -leaf -path (Get-Location)
-    "$([char]27)[92mPS $p> "
+    "$([char]27)[92mPS ~>$([char]27)[0m "
 }
 
 # funcion y alias para editar los alias
