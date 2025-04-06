@@ -1,6 +1,17 @@
 function prompt {
-    $p = Split-Path -leaf -path (Get-Location)
-    "$([char]27)[92mPS ~>$([char]27)[0m "
+    $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+    $adminIndicator = if ($isAdmin) { Write-Host -NoNewline -ForegroundColor Red "[Admin] "}
+
+    # Display user@host and time on the first line
+    Write-Host "$($env:USERNAME)@$($env:COMPUTERNAME)" -ForegroundColor Green -NoNewline
+    Write-Host " [$(Get-Date -Format HH:mm:ss)]" -ForegroundColor Yellow
+
+    # Display current path on the second line, potentially with Admin indicator
+    $adminIndicator # This executes the Write-Host command if $isAdmin was true
+    Write-Host "$($pwd.Path)" -ForegroundColor Cyan
+
+    # Return the actual prompt symbol for the third line
+    return "> "
 }
 
 # funcion y alias para editar los alias
