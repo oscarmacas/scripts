@@ -1,3 +1,4 @@
+# ESTILO PERSONALIZADO DE PROMPT
 function prompt {
     $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
     $adminIndicator = if ($isAdmin) { Write-Host -NoNewline -ForegroundColor Red "[Admin] "}
@@ -38,12 +39,20 @@ function enviar {
     croc send --code oscarm $files
 }
 
+# NAVEGACION DE DIRECTORIOS
+
 function usr { Set-Location ~ }
 function docs { Set-Location ~\Documents }
 function desk { Set-Location ~\Desktop }
 function dw { Set-Location ~\Downloads }
 function tg { Set-Location "~\Downloads\Telegram Desktop" }
 
+# PARA SALIR DE POWERSHELL
+function q {
+    exit
+}
+
+# VER LOS NOMBRES DE LAS REDES WIFI CON SUS CLAVES
 function wfnames {
     # Get all Wi-Fi profile names
     $profileNames = (netsh wlan show profiles) | 
@@ -72,6 +81,7 @@ function wfnames {
     $results | Format-Table -AutoSize
 }
 
+# MOSTRAR EL HISTORIAL DE COMANDOS
 function Get-FzfHistory {
     $history = Get-Content (Get-PSReadLineOption).HistorySavePath
     $uniqueHistory = $history | Where-Object { $_ -ne "" } | Select-Object -Unique
@@ -90,6 +100,7 @@ function Get-FzfHistory {
 # Optional: Set a shorter alias
 Set-Alias -Name hh -Value Get-FzfHistory
 
+# DESCARGAR MUSICA NUEVA
 function music25 {
     param (
         [string]$OutputFolder = ".\Downloads"
