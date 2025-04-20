@@ -29,6 +29,8 @@ function fe { fzf -e | clip }
 function oslink { curl https://gitlab.com/scripts2073949/scripts/-/raw/main/oslink }
 function osinstall { curl https://gitlab.com/scripts2073949/scripts/-/raw/main/osinstall }
 
+function udalias { irm "https://raw.githubusercontent.com/oscarmacas/scripts/main/Microsoft.PowerShell_profile.ps1">$HOME\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 | iex }
+
 # Function to send files using croc with a preset code
 function enviar {
     param(
