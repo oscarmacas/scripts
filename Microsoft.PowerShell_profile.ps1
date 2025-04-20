@@ -89,3 +89,42 @@ function Get-FzfHistory {
 
 # Optional: Set a shorter alias
 Set-Alias -Name hh -Value Get-FzfHistory
+
+function music25 {
+    param (
+        [string]$OutputFolder = ".\Downloads"
+    )
+    
+    # Create output folder if it doesn't exist
+    if (-not (Test-Path -Path $OutputFolder)) {
+        New-Item -ItemType Directory -Path $OutputFolder | Out-Null
+    }
+    
+    # URLs to download
+    $urls = @(
+        "http://191.100.115.225:85/api/public/dl/N0SjBvCL/music/house1.mp4",
+        "http://191.100.115.225:85/api/public/dl/bDtDOtvy/music/house2.mp4",
+        "http://191.100.115.225:85/api/public/dl/mZi3h7JW/music/house3.mp4"
+    )
+    
+    # Download each file
+    foreach ($url in $urls) {
+        try {
+            $fileName = [System.IO.Path]::GetFileName($url)
+            $outputPath = Join-Path -Path $OutputFolder -ChildPath $fileName
+            
+            Write-Host "Downloading $fileName..."
+            
+            # Use Invoke-WebRequest to download the file
+            Invoke-WebRequest -Uri $url -OutFile $outputPath
+            
+            Write-Host "Successfully downloaded to $outputPath" -ForegroundColor Green
+        }
+        catch {
+            Write-Host "Failed to download $url" -ForegroundColor Red
+            Write-Host "Error: $_" -ForegroundColor Red
+        }
+    }
+    
+    Write-Host "Download process completed." -ForegroundColor Cyan
+}
