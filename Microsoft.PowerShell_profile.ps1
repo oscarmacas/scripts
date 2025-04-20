@@ -48,6 +48,8 @@ function docs { Set-Location ~\Documents }
 function desk { Set-Location ~\Desktop }
 function dw { Set-Location ~\Downloads }
 function tg { Set-Location "~\Downloads\Telegram Desktop" }
+function c { Set-Location C:\ }
+
 
 # PARA SALIR DE POWERSHELL
 function q {
@@ -140,4 +142,23 @@ function music25 {
     }
     
     Write-Host "Download process completed." -ForegroundColor Cyan
+}
+
+# USAR WORMHOLE PARA ENVIAR Y RECIBIR ARCHIVOS
+function sf {
+    param(
+        [Parameter(ValueFromRemainingArguments=$true)]
+        [string[]]$remainingArgs
+    )
+    
+    wormhole send --code 000-os @remainingArgs
+}
+
+function rf {
+    param(
+        [string]$code = "000-os"  # Default code if none provided
+    )
+    
+    # Automatically confirm 'y' and receive the file
+    echo "y" | wormhole receive $code
 }
