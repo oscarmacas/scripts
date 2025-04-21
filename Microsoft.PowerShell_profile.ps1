@@ -162,3 +162,34 @@ function rf {
     # Automatically confirm 'y' and receive the file
     echo "y" | wormhole receive $code
 }
+
+function Update-Profile {
+    <#
+    .SYNOPSIS
+        Updates the PowerShell profile from a GitHub repository and refreshes the session.
+    
+    .DESCRIPTION
+        Downloads the latest profile script from GitHub, saves it to the default profile location,
+        and refreshes the current PowerShell session to apply changes.
+    #>
+    
+    # Download and update the profile
+    try {
+        $profileUrl = "https://raw.githubusercontent.com/oscarmacas/scripts/main/Microsoft.PowerShell_profile.ps1"
+        $profilePath = "$HOME\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
+        
+        Write-Host "Downloading latest profile from GitHub..." -ForegroundColor Cyan
+        Invoke-RestMethod -Uri $profileUrl -OutFile $profilePath
+        
+        Write-Host "Profile updated successfully. Refreshing session..." -ForegroundColor Green
+        
+        # Refresh the current session by dot-sourcing the new profile
+        . $profilePath
+    }
+    catch {
+        Write-Host "Error updating profile: $_" -ForegroundColor Red
+    }
+}
+
+# Create an alias for convenience
+Set-Alias -Name udalias -Value Update-Profile
