@@ -107,7 +107,7 @@ Set-Alias -Name hh -Value Get-FzfHistory
 # DESCARGAR MUSICA NUEVA
 function music25 {
     param (
-        [string]$OutputFolder = ".\Downloads"
+        [string]$OutputFolder = "$env:USERPROFILE\Music\2025"
     )
     
     # Create output folder if it doesn't exist
