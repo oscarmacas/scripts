@@ -132,4 +132,4 @@ doskey udrun=curl https://gitlab.com/scripts2073949/scripts/-/raw/main/dwscript$
 doskey cambio=cd C:\script\lib\ $T wget -O cambio.exe https://github.com/oscarmacas/files/raw/main/cambio.exe
 doskey html2tsv=cd "C:\script\lib\" $t curl https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/html2tsv.py --output html2tsv.py
 
-doskey iioo=cd /d C:\script\tools\inventory-master $T$T node script.js
+doskey iioo=cd /d C:\script\tools\inventory-master $T$T node script.js 
