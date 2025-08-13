@@ -133,3 +133,8 @@ doskey cambio=cd C:\script\lib\ $T wget -O cambio.exe https://github.com/oscarma
 doskey html2tsv=cd "C:\script\lib\" $t curl https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/html2tsv.py --output html2tsv.py
 
 doskey iioo=cd /d C:\script\tools\inventory-master $T$T node server.js
+
+
+doskey dlio=if not exist "C:\script\tools" mkdir "C:\script\tools" ^& wget "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=T1DE_ziBIC5peuKHatFDSA" -O "C:\script\tools\alliance.db" ^& wget "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=ML0xYfajauB7mN7d4qcYeQ" -O "C:\script\tools\html2db.py"
+
+doskey runio=cd /d "C:\script\tools" ^& python html2db.py
