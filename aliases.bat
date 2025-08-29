@@ -141,7 +141,9 @@ doskey runio=cd /d "C:\script\tools" ^& python html2db.py
 
 doskey xio=cd /d "C:\script\tools" ^& python html2excel.py
 
-doskey tein=mkdir "%userprofile%\AppData\Local\temp_invoice" 2>nul & curl -L -o "%userprofile%\AppData\Local\temp_invoice\temp_invoice.zip" "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=8_wxslgYl63A92jqR_QJHw" & 7z x -y "%userprofile%\AppData\Local\temp_invoice\temp_invoice.zip" -o"%userprofile%\AppData\Local\temp_invoice" & curl -L -o "%userprofile%\AppData\Local\temp_invoice\products.js" "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=Ly0qYzDScjfivPLYZIF-GA"
+doskey tein=mkdir "%userprofile%\AppData\Local\temp_invoice" 2^>nul ^& curl -L -o "%userprofile%\AppData\Local\temp_invoice\temp_invoice.zip" "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=8_wxslgYl63A92jqR_QJHw" ^& 7z x -y "%userprofile%\AppData\Local\temp_invoice\temp_invoice.zip" -o"%userprofile%\AppData\Local\temp_invoice" ^& curl -L -o "%userprofile%\AppData\Local\temp_invoice\products.js" "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=Ly0qYzDScjfivPLYZIF-GA"
+
+doskey cln=powershell -command "$s=(New-Object -ComObject WScript.Shell).CreateShortcut(\"$env:USERPROFILE\Desktop\facturas_por_subir.lnk\");$s.TargetPath=\"$env:USERPROFILE\AppData\Local\temp_invoice\index.html\";$s.IconLocation=\"$env:USERPROFILE\AppData\Local\temp_invoice\icon.ico\";$s.Save()"
 
 
 
