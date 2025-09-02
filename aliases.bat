@@ -134,16 +134,14 @@ doskey html2tsv=cd "C:\script\lib\" $t curl https://raw.githubusercontent.com/os
 
 doskey iioo=cd /d C:\script\tools\inventory-master $T$T node server.js
 
-
-doskey dlio=if not exist "C:\script\tools" mkdir "C:\script\tools" ^& wget "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=T1DE_ziBIC5peuKHatFDSA" -O "C:\script\tools\alliance.db" ^& wget "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=ML0xYfajauB7mN7d4qcYeQ" -O "C:\script\tools\html2db.py" ^& wget "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=D-XSBwON-9EZDwhGzzX01A" -O "C:\script\tools\html2excel.py"
-
-doskey runio=cd /d "C:\script\tools" ^& python html2db.py
+doskey runio=cd /d "C:\script\tools" ^& html2db.exe
 
 doskey xio=cd /d "C:\script\tools" ^& python html2excel.py
 
 doskey tein=mkdir "%userprofile%\AppData\Local\temp_invoice" 2^>nul ^& curl -L -o "%userprofile%\AppData\Local\temp_invoice\temp_invoice.zip" "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=8_wxslgYl63A92jqR_QJHw" ^& 7z x -y "%userprofile%\AppData\Local\temp_invoice\temp_invoice.zip" -o"%userprofile%\AppData\Local\temp_invoice" ^& curl -L -o "%userprofile%\AppData\Local\temp_invoice\products.js" "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=Ly0qYzDScjfivPLYZIF-GA"
 
-doskey cln=powershell -command "$s=(New-Object -ComObject WScript.Shell).CreateShortcut(\"$env:USERPROFILE\Desktop\facturas_por_subir.lnk\");$s.TargetPath=\"$env:USERPROFILE\AppData\Local\temp_invoice\index.html\";$s.IconLocation=\"$env:USERPROFILE\AppData\Local\temp_invoice\icon.ico\";$s.Save()"
-
-
-
+doskey dlio=^
+mkdir "C:\script\tools" 2>nul ^& ^
+wget "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=T1DE_ziBIC5peuKHatFDSA" -O "C:\script\tools\alliance.db" ^& ^
+wget "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=QuL96SnPzK6EwNKLlXSiWw" -O "C:\script\tools\html2db.exe" ^& ^
+wget "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=D-XSBwON-9EZDwhGzzX01A" -O "C:\script\tools\html2excel.py"
