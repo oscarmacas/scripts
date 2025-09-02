@@ -48,8 +48,8 @@ doskey yd=yt-dlp -f m4a -o "%(title)s.%(ext)s" "$*"
 doskey cc=7z a -tzip $1.zip $2 $3 $4 $5 $6
 doskey xx=if not exist "$1" (echo File not found: $1) else if "$2"=="" (for %%I in ("$1") do 7z x "%%I" -o"%%~dpnI") else if exist "$2\" (7z x "$1" -o"$2") else (echo Invalid output directory: $2) $t cd $1 $t dir /b
 doskey r=curl -L rentry.co/$*/raw $B bat -l markdown
-doskey oslink=curl https://gitlab.com/scripts2073949/scripts/-/raw/main/oslink 
-doskey osinstall=curl https://gitlab.com/scripts2073949/scripts/-/raw/main/osinstall 
+doskey oslink=curl https://gitlab.com/macas.oscar/alias/-/raw/main/oslink 
+doskey osinstall=curl https://gitlab.com/macas.oscar/alias/-/raw/main/osinstall 
 doskey mr=curl -L rentry.co/$*/raw $B micro
 doskey impresiones=cd C:\php\web\amfphp\services\SIGNUM\IMPRESIONES\ $T$T move IMPRESIONES.php IMPRESIONES.php.back $T$T curl https://raw.githubusercontent.com/oscarmacas/files/main/IMPRESIONES.php$GC:\php\web\amfphp\services\SIGNUM\IMPRESIONES\IMPRESIONES.php
 doskey ipp=curl icanhazip.com
