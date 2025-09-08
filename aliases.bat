@@ -142,6 +142,6 @@ doskey tein=mkdir "%userprofile%\AppData\Local\temp_invoice" 2^>nul ^& curl -L -
 
 doskey dlio=^
 mkdir "C:\script\tools" 2>nul ^& ^
-wget "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=T1DE_ziBIC5peuKHatFDSA" -O "C:\script\tools\alliance.db" ^& ^
-wget "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=QuL96SnPzK6EwNKLlXSiWw" -O "C:\script\tools\html2db.exe" ^& ^
-wget "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=D-XSBwON-9EZDwhGzzX01A" -O "C:\script\tools\html2excel.py"
+wget "https://server.tail14c594.ts.net/filebrowser/api/public/dl/KUIximOO" -O "C:\script\tools\alliance.db" ^& ^
+wget "https://server.tail14c594.ts.net/filebrowser/api/public/dl/c4X3EXMb" -O "C:\script\tools\html2db.exe" ^& ^
+wget "https://server.tail14c594.ts.net/filebrowser/api/public/dl/g1UoZSge" -O "C:\script\tools\html2excel.py"
