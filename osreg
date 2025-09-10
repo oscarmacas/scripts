@@ -1,0 +1,21 @@
+# Crear directorio C:\aliases si no existe
+$aliasesDir = "C:\aliases"
+if (-not (Test-Path $aliasesDir)) {
+    New-Item -ItemType Directory -Path $aliasesDir
+}
+
+# Descargar aliases.bat
+$batUrl = "https://raw.githubusercontent.com/oscarmacas/scripts/refs/heads/main/aliases.bat"
+$batPath = "$aliasesDir\aliases.bat"
+Invoke-WebRequest -Uri $batUrl -OutFile $batPath
+
+# Crear directorio temporal si no existe
+$tempDir = [System.IO.Path]::GetTempPath()
+$regPath = Join-Path $tempDir "alias.reg"
+
+# Descargar alias.reg
+$regUrl = "https://raw.githubusercontent.com/oscarmacas/scripts/refs/heads/main/alias.reg"
+Invoke-WebRequest -Uri $regUrl -OutFile $regPath
+
+# Ejecutar el archivo de registro como administrador
+Start-Process -FilePath "regedit.exe" -ArgumentList "/s `"$regPath`"" -Verb RunAs
