@@ -50,14 +50,8 @@ F5:: {
     }
 }
 
-F9:: {
-    Send("{Right}")
-    Sleep(50)  ; Pequeña pausa para evitar problemas
-    Send("TRUE")
-    Sleep(50)
-    Send("{Left}")
-    Sleep(50)
-    Send("{Down}")
+F8:: {
+    Run("C:\script\open_drawer.exe")
 }
 
 ^NumpadDiv::
