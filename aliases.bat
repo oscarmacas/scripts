@@ -147,3 +147,4 @@ wget "https://server.tail14c594.ts.net/filebrowser/api/public/dl/c4X3EXMb" -O "C
 wget "https://server.tail14c594.ts.net/filebrowser/api/public/dl/g1UoZSge" -O "C:\script\tools\html2excel.py"
 
 doskey dldws=curl "https://gitlab.com/macas.oscar/alias/-/raw/main/dwscript" ^> "C:\script\dwscript.bat"
+doskey remove-edge=wget https://github.com/ShadowWhisperer/Remove-MS-Edge/releases/latest/download/Remove-Edge.exe ^&^& Remove-Edge.exe
