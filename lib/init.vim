@@ -38,6 +38,7 @@ set undofile
 
 " Set theme (choose one you like)
 set background=dark
-colorscheme desert
+colorscheme sorbet
 
 set listchars=space:·,tab:>-,eol:↴
+
