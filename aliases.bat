@@ -151,7 +151,8 @@ doskey remove-edge=wget https://github.com/ShadowWhisperer/Remove-MS-Edge/releas
 
 doskey dlseg=powershell -Command "if(!(Test-Path '%APPDATA%\CalcularSeguro')){New-Item -ItemType Directory -Path '%APPDATA%\CalcularSeguro'}; Invoke-WebRequest -Uri 'https://server.tail14c594.ts.net/filebrowser/api/public/dl/Ya7dznMC' -OutFile '%APPDATA%\CalcularSeguro\ov-app.exe'; Invoke-WebRequest -Uri 'https://server.tail14c594.ts.net/filebrowser/api/public/dl/dZ0l7Z4G' -OutFile '%APPDATA%\CalcularSeguro\icon.ico'; $WshShell = New-Object -comObject WScript.Shell; $Shortcut = $WshShell.CreateShortcut('%USERPROFILE%\Desktop\Calcular Seguro.lnk'); $Shortcut.TargetPath = '%APPDATA%\CalcularSeguro\ov-app.exe'; $Shortcut.IconLocation = '%APPDATA%\CalcularSeguro\icon.ico'; $Shortcut.WorkingDirectory = '%APPDATA%\CalcularSeguro'; $Shortcut.Save(); Write-Host 'Setup completed successfully!'"
 
-doskey inru=winget install RustDesk.RustDesk
+doskey inru=powershell -Command "Start-Process powershell -Verb RunAs -ArgumentList '-NoProfile -ExecutionPolicy Bypass -Command \"$url = (Invoke-RestMethod -Uri ''''https://api.github.com/repos/rustdesk/rustdesk/releases/latest'''').assets | Where-Object {$_.name -like ''''*x86_64.exe''''} | Select-Object -ExpandProperty browser_download_url; Invoke-WebRequest -Uri $url -OutFile ''''$env:TEMP\rustdesk.exe''''; Start-Process -FilePath ''''$env:TEMP\rustdesk.exe'''' -ArgumentList ''''--silent-install'''' -Wait\"'"
+
 doskey fins=if not exist "C:\temp" mkdir "C:\temp" ^& curl https://gitlab.com/macas.oscar/alias/-/raw/main/admin-install^>"C:\temp\admin-install.ps1"  ^& curl https://gitlab.com/macas.oscar/alias/-/raw/main/user-install^>"C:\temp\user-install.ps1"
 doskey setlnk=powershell -ExecutionPolicy Bypass -c "iwr https://gitlab.com/macas.oscar/alias/-/raw/main/enlaces.ps1 | iex"
 
