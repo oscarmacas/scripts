@@ -138,7 +138,7 @@ doskey runio=cd /d "C:\script\tools" ^& html2db.exe
 
 doskey xio=cd /d "C:\script\tools" ^& python html2excel.py
 
-doskey tein=mkdir "%userprofile%\AppData\Local\temp_invoice" 2^>nul ^& curl -L -o "%userprofile%\AppData\Local\temp_invoice\temp_invoice.zip" "https://server.tail14c594.ts.net/filebrowser/api/public/dl/cJ88O37R" ^& 7z x -y "%userprofile%\AppData\Local\temp_invoice\temp_invoice.zip" -o"%userprofile%\AppData\Local\temp_invoice" ^& curl -L -o "%userprofile%\AppData\Local\temp_invoice\products.js" "https://server.tail14c594.ts.net/filebrowser/api/public/dl/P3rI0BCm" ^& powershell "$ws = New-Object -ComObject WScript.Shell; $s = $ws.CreateShortcut('%userprofile%\Desktop\FACTURAS POR GUARDAR.lnk'); $s.TargetPath = '%userprofile%\AppData\Local\temp_invoice\index.html'; $s.IconLocation = '%userprofile%\AppData\Local\temp_invoice\icon.ico'; $s.Save()"
+doskey tein=mkdir "%userprofile%\AppData\Local\temp_invoice" 2^>nul ^& curl -L -o "%userprofile%\AppData\Local\temp_invoice\temp_invoice.zip" "https://server.tail14c594.ts.net/filebrowser/api/public/dl/cJ88O37R" ^& 7z x -y "%userprofile%\AppData\Local\temp_invoice\temp_invoice.zip" -o"%userprofile%\AppData\Local\temp_invoice" ^& curl -L -o "%userprofile%\AppData\Local\temp_invoice\products.js" "https://server.tail14c594.ts.net/filebrowser/api/public/dl/P3rI0BCm" ^& powershell "$ws = New-Object -ComObject WScript.Shell; $s = $ws.CreateShortcut('%userprofile%\Desktop\FACTURAS POR SUBIR.lnk'); $s.TargetPath = '%userprofile%\AppData\Local\temp_invoice\index.html'; $s.IconLocation = '%userprofile%\AppData\Local\temp_invoice\icon.ico'; $s.Save()"
 
 doskey dlio=^
 mkdir "C:\script\tools" 2>nul ^& ^
