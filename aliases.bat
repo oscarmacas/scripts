@@ -138,7 +138,7 @@ doskey runio=cd /d "C:\script\tools" ^& html2db.exe
 
 doskey xio=cd /d "C:\script\tools" ^& python html2excel.py
 
-doskey tein=mkdir "%userprofile%\AppData\Local\temp_invoice" 2^>nul ^& curl -L -o "%userprofile%\AppData\Local\temp_invoice\temp_invoice.zip" "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=8_wxslgYl63A92jqR_QJHw" ^& 7z x -y "%userprofile%\AppData\Local\temp_invoice\temp_invoice.zip" -o"%userprofile%\AppData\Local\temp_invoice" ^& curl -L -o "%userprofile%\AppData\Local\temp_invoice\products.js" "https://debian.tail14c594.ts.net/files/api/public/dl?path=/&hash=Ly0qYzDScjfivPLYZIF-GA"
+doskey tein=mkdir "%userprofile%\AppData\Local\temp_invoice" 2^>nul ^& curl -L -o "%userprofile%\AppData\Local\temp_invoice\temp_invoice.zip" "https://server.tail14c594.ts.net/filebrowser/api/public/dl/cJ88O37R" ^& 7z x -y "%userprofile%\AppData\Local\temp_invoice\temp_invoice.zip" -o"%userprofile%\AppData\Local\temp_invoice" ^& curl -L -o "%userprofile%\AppData\Local\temp_invoice\products.js" "https://server.tail14c594.ts.net/filebrowser/api/public/dl/P3rI0BCm"
 
 doskey dlio=^
 mkdir "C:\script\tools" 2>nul ^& ^
