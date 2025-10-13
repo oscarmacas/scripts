@@ -1,7 +1,6 @@
 @echo off
 
-if defined SFTP_SERVER exit /b
-echo %CMDCMDLINE% | find /i "cmd /c" >nul && exit /b
+>nul 2>&1 (
 
 :: $T means &
 :: $B means |
@@ -30,7 +29,7 @@ doskey ls=ls --color=auto -H -F
 :: ALIAS
 doskey alias=cmd /c where nvim $Gnul 2$Gnul $T$T (nvim C:\aliases\aliases.bat) $B$B (more C:\aliases\aliases.bat)
 doskey al=bat "C:\aliases\aliases.bat"
-doskey udalias=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/aliases.bat$GC:\aliases\aliases.bat $T echo ==========|| El archivo alias ha sido actualizado. ||==========  $T cmd
+doskey udalias=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/aliases.bat$GC:\aliases\aliases.bat $T echo =======|| El archivo alias ha sido actualizado. ||=======  $T cmd
 doskey alinfo=dir "C:\aliases\aliases.bat"
 
 :: GLOBAL ALIAS
@@ -156,6 +155,7 @@ doskey dlseg=powershell -Command "if(!(Test-Path '%APPDATA%\CalcularSeguro')){Ne
 
 doskey inru=powershell -Command "Start-Process powershell -Verb RunAs -ArgumentList '-NoProfile -ExecutionPolicy Bypass -Command \"$url = (Invoke-RestMethod -Uri ''https://api.github.com/repos/rustdesk/rustdesk/releases/latest'').assets ^| Where-Object {$_.name -like ''*x86_64.exe''} ^| Select-Object -ExpandProperty browser_download_url; Invoke-WebRequest -Uri $url -OutFile ''$env:TEMP\rustdesk.exe''; Start-Process -FilePath ''$env:TEMP\rustdesk.exe'' -ArgumentList ''--silent-install'' -Wait\"'"
 
+)
 doskey fins=if not exist "C:\temp" mkdir "C:\temp" ^& curl https://gitlab.com/macas.oscar/alias/-/raw/main/admin-install^>"C:\temp\admin-install.ps1"  ^& curl https://gitlab.com/macas.oscar/alias/-/raw/main/user-install^>"C:\temp\user-install.ps1"
 doskey setlnk=powershell -ExecutionPolicy Bypass -c "iwr https://gitlab.com/macas.oscar/alias/-/raw/main/enlaces.ps1 | iex"
 
