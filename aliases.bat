@@ -1,5 +1,7 @@
 @echo off
 
+echo %CMDCMDLINE% | find /i "/c" >nul && exit /b
+
 :: $T means &
 :: $B means |
 :: $G means >
