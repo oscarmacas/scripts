@@ -1,6 +1,7 @@
 @echo off
 
-echo %CMDCMDLINE% | find /i "/c" >nul && exit /b
+if defined SFTP_SERVER exit /b
+echo %CMDCMDLINE% | find /i "cmd /c" >nul && exit /b
 
 :: $T means &
 :: $B means |
