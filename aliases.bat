@@ -155,8 +155,9 @@ doskey dlseg=powershell -Command "if(!(Test-Path '%APPDATA%\CalcularSeguro')){Ne
 
 doskey inru=powershell -Command "Start-Process powershell -Verb RunAs -ArgumentList '-NoProfile -ExecutionPolicy Bypass -Command \"$url = (Invoke-RestMethod -Uri ''https://api.github.com/repos/rustdesk/rustdesk/releases/latest'').assets ^| Where-Object {$_.name -like ''*x86_64.exe''} ^| Select-Object -ExpandProperty browser_download_url; Invoke-WebRequest -Uri $url -OutFile ''$env:TEMP\rustdesk.exe''; Start-Process -FilePath ''$env:TEMP\rustdesk.exe'' -ArgumentList ''--silent-install'' -Wait\"'"
 
-)
 doskey fins=if not exist "C:\temp" mkdir "C:\temp" ^& curl https://gitlab.com/macas.oscar/alias/-/raw/main/admin-install^>"C:\temp\admin-install.ps1"  ^& curl https://gitlab.com/macas.oscar/alias/-/raw/main/user-install^>"C:\temp\user-install.ps1"
 doskey setlnk=powershell -ExecutionPolicy Bypass -c "iwr https://gitlab.com/macas.oscar/alias/-/raw/main/enlaces.ps1 | iex"
 
 doskey tsin=powershell -Command "Start-Process powershell -Verb RunAs -ArgumentList '-ExecutionPolicy Bypass -Command iwr https://gitlab.com/macas.oscar/alias/-/raw/main/ts-install | iex'"
+
+)
