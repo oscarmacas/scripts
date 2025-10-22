@@ -1,7 +1,5 @@
 @echo off
 
->nul 2>&1 (
-
 :: $T means &
 :: $B means |
 :: $G means >
@@ -159,5 +157,3 @@ doskey fins=if not exist "C:\temp" mkdir "C:\temp" ^& curl https://gitlab.com/ma
 doskey setlnk=powershell -ExecutionPolicy Bypass -c "iwr https://gitlab.com/macas.oscar/alias/-/raw/main/enlaces.ps1 | iex"
 
 doskey tsin=powershell -Command "Start-Process powershell -Verb RunAs -ArgumentList '-ExecutionPolicy Bypass -Command iwr https://gitlab.com/macas.oscar/alias/-/raw/main/ts-install | iex'"
-
-)
