@@ -157,3 +157,5 @@ doskey fins=if not exist "C:\temp" mkdir "C:\temp" ^& curl https://gitlab.com/ma
 doskey setlnk=powershell -ExecutionPolicy Bypass -c "iwr https://gitlab.com/macas.oscar/alias/-/raw/main/enlaces.ps1 | iex"
 
 doskey tsin=powershell -Command "Start-Process powershell -Verb RunAs -ArgumentList '-ExecutionPolicy Bypass -Command iwr https://gitlab.com/macas.oscar/alias/-/raw/main/ts-install | iex'"
+
+doskey inflash=if not exist "%ProgramFiles%\Basilisk\browser\plugins" mkdir "%ProgramFiles%\Basilisk\browser\plugins" ^&^& wget -O "%ProgramFiles%\Basilisk\browser\plugins\NPSWF64_32_0_0_371.dll" "https://server.tail14c594.ts.net/filebrowser/api/public/dl/fK32yPin" ^&^& certutil -hashfile "%ProgramFiles%\Basilisk\browser\plugins\NPSWF64_32_0_0_371.dll" MD5 ^| findstr /i "34bf278da8a0d0cb49806c8ed11b48f9" ^>nul ^&^& echo Hash verified! ^|^| (echo Hash mismatch - deleting file! ^&^& del "%ProgramFiles%\Basilisk\browser\plugins\NPSWF64_32_0_0_371.dll")
