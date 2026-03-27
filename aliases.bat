@@ -19,10 +19,8 @@ doskey stup=cd "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Progr
 doskey apdt=cd %appdata%
 doskey .=start .
 doskey q=exit
-::doskey ls=dir /B
 doskey ll=dir /B /od
 doskey rd=rd $* /S /Q
-doskey ls=ls --color=auto -H -F
 
 :: ALIAS
 doskey alias=cmd /c where nvim $Gnul 2$Gnul $T$T (nvim C:\aliases\aliases.bat) $B$B (more C:\aliases\aliases.bat)
@@ -48,8 +46,8 @@ doskey yd=yt-dlp -f m4a -o "%(title)s.%(ext)s" "$*"
 doskey cc=7z a -tzip $1.zip $2 $3 $4 $5 $6
 doskey xx=if not exist "$1" (echo File not found: $1) else if "$2"=="" (for %%I in ("$1") do 7z x "%%I" -o"%%~dpnI") else if exist "$2\" (7z x "$1" -o"$2") else (echo Invalid output directory: $2) $t cd $1 $t dir /b
 doskey r=curl -L rentry.co/$*/raw $B bat -l markdown
-doskey oslink=curl https://gitlab.com/macas.oscar/alias/-/raw/main/oslink 
-doskey osinstall=curl https://gitlab.com/macas.oscar/alias/-/raw/main/osinstall 
+doskey oslink=curl https://gitlab.com/macas.oscar/alias/-/raw/main/oslink
+doskey osinstall=curl https://gitlab.com/macas.oscar/alias/-/raw/main/osinstall
 doskey mr=curl -L rentry.co/$*/raw $B micro
 doskey impresiones=cd C:\php\web\amfphp\services\SIGNUM\IMPRESIONES\ $T$T move IMPRESIONES.php IMPRESIONES.php.back $T$T curl https://raw.githubusercontent.com/oscarmacas/files/main/IMPRESIONES.php$GC:\php\web\amfphp\services\SIGNUM\IMPRESIONES\IMPRESIONES.php
 doskey ipp=curl icanhazip.com
@@ -58,13 +56,8 @@ doskey cin=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k 
 doskey win=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && winget install $*'"
 doskey wws=winget search $*
 doskey k=taskkill /IM WindowsTerminal.exe
-doskey ccs=choco search $*
-doskey cin=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && choco install $* -y'"
 doskey cup=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && choco upgrade $* -y'"
 doskey cupkg=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && choco upgrade croc -y && choco upgrade 7zip -y && choco upgrade aria2 -y && yt-dlp -U && winget upgrade RustDesk.RustDesk'"
-doskey win=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && winget install $*'"
-doskey wws=winget search $*
-doskey k=taskkill /IM WindowsTerminal.exe
 doskey ..= cd ..
 doskey ...= cd ..\..
 doskey 7zl=7z l $*
@@ -77,78 +70,3 @@ doskey yprint=cd "C:\php\web\amfphp\services\SIGNUM\IMPRESIONES\" $T ren IMPRESI
 doskey stxt=croc send --code oscarm --text $*
 doskey rtxt=croc --yes oscarm
 doskey conv="C:\script\todoconvert.bat"
-doskey dlahk=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/script.ahk$G"%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk" $T "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk"
-doskey udss=taskkill /im "autohotkey.exe" $T taskkill /im "autohotkey64.exe" $T del "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk" $T curl https://raw.githubusercontent.com/oscarmacas/scripts/main/script.ahk$G"%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk" $T "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk"
-doskey inputy=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/inv_input.ahk$G"C:\script\inv_input.ahk" $T "C:\script\inv_input.ahk"
-doskey inputn=taskkill /im "autohotkey.exe" $T taskkill /im "autohotkey64.exe" $T "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk"
-doskey xxc=curl -L rentry.co/$*/raw $B fzf -e $B clip
-doskey xtbat=mkdir "C:\script\lib\" $t cd "C:\script\lib\" $t curl https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/extract_zip.bat --output extract_zip.bat $t curl https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/compress_zip.bat --output compress_zip.bat
-doskey whr=cd "C:\script\lib\" $t curl https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/receive.bat --output receive.bat
-doskey xt="C:\script\lib\extract_zip.bat" $*
-doskey az="C:\script\lib\compress_zip.bat" $*
-doskey udnvim=cmd /c "if not exist "%USERPROFILE%\AppData\Local\nvim" mkdir "%USERPROFILE%\AppData\Local\nvim" $t curl -o "%USERPROFILE%\AppData\Local\nvim\init.vim" https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/init.vim"
-doskey nv=nvim $*
-doskey sf=wormhole send --code 000-os $*
-doskey rf="C:\script\lib\receive.bat"
-doskey lnk=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T curl -o C:\script\lib\links.zip https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/links.zip $T cd C:\script\lib\ $T 7z x links.zip -olinks $T del links.zip" $T echo ======== EJECUTA EL COMANDO QUE CREA EL ACCESO DIRECTO DE run_batch.vbs ============
-doskey oper=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% $T$T curl -o Opera_GX_113.0.5230.75_Setup_x64.exe -L https://get.geo.opera.com/pub/opera_gx/113.0.5230.75/win/Opera_GX_113.0.5230.75_Setup_x64.exe $T$T Opera_GX_113.0.5230.75_Setup_x64.exe --silent --install'"
-doskey fnm=rg -i "$*" %AppData%\ovscript\nm
-doskey gnm=cmd /c "if not exist %AppData%\ovscript\nm mkdir %AppData%\ovscript\nm $T cd %AppData%\ovscript\nm $T croc --yes oscarm"
-doskey irg=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && winget install BurntSushi.ripgrep.MSVC'"
-doskey cod=bat C:\script\lib\codes\codes $B fzf -e
-doskey codin=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T cd C:\script\lib\ $T wget -O codes.zip https://github.com/oscarmacas/files/raw/main/codes.zip $T 7z x codes.zip -ocodes -aoa"
-doskey codin2=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T cd C:\script\lib\ $T wget -O codlookup.zip https://github.com/oscarmacas/files/raw/main/codlookup.zip $T 7z x codlookup.zip -aoa"
-doskey video= cd %userprofile%\Videos\youtube\video $T yt-dlp -f mp4 $* $T start .
-doskey audio= cd %userprofile%\Videos\youtube\audio $T yt-dlp -f m4a $* $T start .
-doskey drawst=cmd /c "if not exist C:\script\lib\ mkdir C:\script\lib\ $T curl -o C:\script\lib\abre_registradora.py https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/abre_registradora.py"
-
-:: NVIM RELATED ALIASES
-doskey nvico=git clone https://github.com/oscarmacas/nvim.git %USERPROFILE%\AppData\Local\nvim
-doskey udvi=git pull https://github.com/oscarmacas/nvim.git %USERPROFILE%\AppData\Local\nvim
-
-:: INSTALAR SCRIPTS DE PYTHON
-doskey pyst=git clone https://github.com/oscarmacas/python.git C:\script\python_scripts
-
-:: suma los codigos y busca los nombres y los agrega al final
-doskey sufipy=C:\script\python_scripts\sum_find_csv.py
-
-:: unifica todos los csv en uno solo
-doskey merpy=C:\script\python_scripts\merge.py
-
-:: organiza las filas y columnas en un excel
-doskey oio=C:\script\python_scripts\reorder_excel.py
-
-doskey qrip=for /f "tokens=2 delims=:" %%a in ('ipconfig ^^^| findstr /i "IPv4"') do (for /f "tokens=* delims= " %%b in ("%%a") do curl qrenco.de/http://%%b:5000)
-doskey inpy=powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && winget install Python.Python.3.11'"
-
-doskey iodb=cd C:\script\server\ $T$T cls $T$T menu.py
-
-doskey opendrawer=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/open_drawer.exe$GC:\script\open_drawer.exe
-
-:: EDIT DWSCRIPT.BAT
-doskey udrun=curl https://gitlab.com/scripts2073949/scripts/-/raw/main/dwscript$GC:\script\dwscript.bat
-
-doskey cambio=cd C:\script\lib\ $T wget -O cambio.exe https://github.com/oscarmacas/files/raw/main/cambio.exe
-doskey html2tsv=mkdir "C:\script\tools" 2^>nul ^& wget "https://server.tail14c594.ts.net/filebrowser/api/public/dl/OgP7zr5V" -o "C:\script\tools\html2tsv.exe"
-
-doskey iioo=cd /d C:\script\tools\inventory-master $T$T node server.js
-
-doskey runio=cd /d "C:\script\tools" ^& html2db.exe
-
-doskey xio=cd /d "C:\script\tools" ^& python html2excel.py
-
-doskey dlio= mkdir "C:\script\tools" 2>nul $T wget "https://server.tail14c594.ts.net/filebrowser/api/public/dl/KUIximOO" -O "C:\script\tools\alliance.db" $T wget "https://server.tail14c594.ts.net/filebrowser/api/public/dl/c4X3EXMb" -O "C:\script\tools\html2db.exe" $T wget "https://server.tail14c594.ts.net/filebrowser/api/public/dl/g1UoZSge" -O "C:\script\tools\html2excel.py"
-
-doskey dldws=curl "https://gitlab.com/macas.oscar/alias/-/raw/main/dwscript" ^> "C:\script\dwscript.bat"
-doskey remove-edge=wget https://github.com/ShadowWhisperer/Remove-MS-Edge/releases/latest/download/Remove-Edge.exe ^&^& Remove-Edge.exe
-
-doskey dlseg=powershell -Command "if(!(Test-Path '%APPDATA%\CalcularSeguro')){New-Item -ItemType Directory -Path '%APPDATA%\CalcularSeguro'}; Invoke-WebRequest -Uri 'https://server.tail14c594.ts.net/filebrowser/api/public/dl/Ya7dznMC' -OutFile '%APPDATA%\CalcularSeguro\ov-app.exe'; Invoke-WebRequest -Uri 'https://server.tail14c594.ts.net/filebrowser/api/public/dl/dZ0l7Z4G' -OutFile '%APPDATA%\CalcularSeguro\icon.ico'; $WshShell = New-Object -comObject WScript.Shell; $Shortcut = $WshShell.CreateShortcut('%USERPROFILE%\Desktop\Calcular Seguro.lnk'); $Shortcut.TargetPath = '%APPDATA%\CalcularSeguro\ov-app.exe'; $Shortcut.IconLocation = '%APPDATA%\CalcularSeguro\icon.ico'; $Shortcut.WorkingDirectory = '%APPDATA%\CalcularSeguro'; $Shortcut.Save(); Write-Host 'Setup completed successfully!'"
-
-doskey inru=powershell -Command "Start-Process powershell -Verb RunAs -ArgumentList '-NoProfile -ExecutionPolicy Bypass -Command \"$url = (Invoke-RestMethod -Uri ''https://api.github.com/repos/rustdesk/rustdesk/releases/latest'').assets ^| Where-Object {$_.name -like ''*x86_64.exe''} ^| Select-Object -ExpandProperty browser_download_url; Invoke-WebRequest -Uri $url -OutFile ''$env:TEMP\rustdesk.exe''; Start-Process -FilePath ''$env:TEMP\rustdesk.exe'' -ArgumentList ''--silent-install'' -Wait\"'"
-
-doskey fins=if not exist "C:\temp" mkdir "C:\temp" ^& curl https://gitlab.com/macas.oscar/alias/-/raw/main/admin-install^>"C:\temp\admin-install.ps1"  ^& curl https://gitlab.com/macas.oscar/alias/-/raw/main/user-install^>"C:\temp\user-install.ps1"
-doskey setlnk=powershell -ExecutionPolicy Bypass -c "iwr https://gitlab.com/macas.oscar/alias/-/raw/main/enlaces.ps1 | iex"
-
-doskey tsin=powershell -Command "Start-Process powershell -Verb RunAs -ArgumentList '-ExecutionPolicy Bypass -Command iwr https://gitlab.com/macas.oscar/alias/-/raw/main/ts-install | iex'"
-
-doskey inflash=if not exist "%ProgramFiles%\Basilisk\browser\plugins" mkdir "%ProgramFiles%\Basilisk\browser\plugins" ^&^& wget -O "%ProgramFiles%\Basilisk\browser\plugins\NPSWF64_32_0_0_371.dll" "https://server.tail14c594.ts.net/filebrowser/api/public/dl/fK32yPin" ^&^& certutil -hashfile "%ProgramFiles%\Basilisk\browser\plugins\NPSWF64_32_0_0_371.dll" MD5 ^| findstr /i "34bf278da8a0d0cb49806c8ed11b48f9" ^>nul ^&^& echo Hash verified! ^|^| (echo Hash mismatch - deleting file! ^&^& del "%ProgramFiles%\Basilisk\browser\plugins\NPSWF64_32_0_0_371.dll")
