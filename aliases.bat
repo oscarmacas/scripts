@@ -81,7 +81,7 @@ doskey conv="C:\script\todoconvert.bat"
 doskey dlahk=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/script.ahk$G"%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk" $T "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk"
 doskey udss=taskkill /im "autohotkey.exe" $T taskkill /im "autohotkey64.exe" $T del "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk" $T curl https://raw.githubusercontent.com/oscarmacas/scripts/main/script.ahk$G"%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk" $T "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk"
 doskey inputy=curl https://raw.githubusercontent.com/oscarmacas/scripts/main/inv_input.ahk$G"C:\script\inv_input.ahk" $T "C:\script\inv_input.ahk"
-doskey inputn=taskkill /im "autohotkey.exe" $T taskkill /im "autohotkey64.exe" $T "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk
+doskey inputn=taskkill /im "autohotkey.exe" $T taskkill /im "autohotkey64.exe" $T "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script.ahk"
 doskey xxc=curl -L rentry.co/$*/raw $B fzf -e $B clip
 doskey xtbat=mkdir "C:\script\lib\" $t cd "C:\script\lib\" $t curl https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/extract_zip.bat --output extract_zip.bat $t curl https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/compress_zip.bat --output compress_zip.bat
 doskey whr=cd "C:\script\lib\" $t curl https://raw.githubusercontent.com/oscarmacas/scripts/main/lib/receive.bat --output receive.bat
@@ -140,11 +140,7 @@ doskey xio=cd /d "C:\script\tools" ^& python html2excel.py
 
 doskey tein=mkdir "%userprofile%\AppData\Local\temp_invoice" 2^>nul ^& curl -L -o "%userprofile%\AppData\Local\temp_invoice\temp_invoice.zip" "https://server.tail14c594.ts.net/filebrowser/api/public/dl/cJ88O37R" ^& 7z x -y "%userprofile%\AppData\Local\temp_invoice\temp_invoice.zip" -o"%userprofile%\AppData\Local\temp_invoice" ^& curl -L -o "%userprofile%\AppData\Local\temp_invoice\products.js" "https://server.tail14c594.ts.net/filebrowser/api/public/dl/P3rI0BCm" ^& powershell "$ws = New-Object -ComObject WScript.Shell; $s = $ws.CreateShortcut('%userprofile%\Desktop\FACTURAS POR SUBIR.lnk'); $s.TargetPath = '%userprofile%\AppData\Local\temp_invoice\index.html'; $s.IconLocation = '%userprofile%\AppData\Local\temp_invoice\icon.ico'; $s.Save()"
 
-doskey dlio=^
-mkdir "C:\script\tools" 2>nul ^& ^
-wget "https://server.tail14c594.ts.net/filebrowser/api/public/dl/KUIximOO" -O "C:\script\tools\alliance.db" ^& ^
-wget "https://server.tail14c594.ts.net/filebrowser/api/public/dl/c4X3EXMb" -O "C:\script\tools\html2db.exe" ^& ^
-wget "https://server.tail14c594.ts.net/filebrowser/api/public/dl/g1UoZSge" -O "C:\script\tools\html2excel.py"
+doskey dlio= mkdir "C:\script\tools" 2>nul $T wget "https://server.tail14c594.ts.net/filebrowser/api/public/dl/KUIximOO" -O "C:\script\tools\alliance.db" $T wget "https://server.tail14c594.ts.net/filebrowser/api/public/dl/c4X3EXMb" -O "C:\script\tools\html2db.exe" $T wget "https://server.tail14c594.ts.net/filebrowser/api/public/dl/g1UoZSge" -O "C:\script\tools\html2excel.py"
 
 doskey dldws=curl "https://gitlab.com/macas.oscar/alias/-/raw/main/dwscript" ^> "C:\script\dwscript.bat"
 doskey remove-edge=wget https://github.com/ShadowWhisperer/Remove-MS-Edge/releases/latest/download/Remove-Edge.exe ^&^& Remove-Edge.exe
